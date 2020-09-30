@@ -1,0 +1,43 @@
+twenty six computational methods, all but one are machine learning based.
+Computational methods can be classified into three categories, sequenced
+based, structure based, and combined. Among them, sequence-based
+approaches are usually faster and cheaper, and have the advantage that
+sequence information, unlike structure, is much more readily available.
+Machine learning methods use feature groups to represent each
+protein sequence. Widely used features such as position-specific scoring
+matrix (PSSM), evolutionary conservation (ECO), putative relative solvent
+accessibility (RSA) have been assessed in (Zhang et al., 2019b). Highscoring segment pair (HSP) has been used in previous methods for PPI
+prediction (Li and Ilie, 2017). One-hot vectors (Zhang et al., 2019a;
+Zeng et al., 2019) and amino acid embedding (Asgari and Mofrad, 2015;
+Heinzinger et al., 2019; Asgari et al., 2019) have also been empirically
+explored to represent protein sequences.
+The learning structure is crucial to PPI binding sites classification
+problems. Previously explored architectures include random forest (Wei
+et al., 2016; Wang et al., 2019), SVM (Wei et al., 2016), logistic
+regression (Zhang and Kurgan, 2019), Bayes classifier (Murakami and
+Mizuguchi, 2010), artificial neural networks (Singh et al., 2014). Recently,
+convolutional neural network (CNN) (Zeng et al., 2019) and recurrent
+neural network (RNN) (Zhang et al., 2019a) have also been applied to
+solve this problem.
+We introduce a new sequence-based PPI binding sites prediction
+method, DELPHI (DEep Learning Prediction of Highly probable protein
+Interaction sites), that combines a CNN and a RNN structure with fine
+tuning technique. It uses twelve feature groups to represent protein
+sequences including three novel features, high-scoring segment pair
+(HSP), position information, and a reduced 3-mer amino acid embedding
+(ProtVec1D). We have comprehensively compared DELPHI with nine
+state-of-the-art programs on five datasets. DELPHI provides the best
+predictions in all metrics.
+The contributions of the DELPHI study are as follows. First, a novel
+fine tuned ensemble model combing CNN and RNN is constructed.
+Second, three novel features, which are believed to be used the first time
+in PPI binding site prediction, are introduced. Third, a data processing and
+feature construction suite, is provided, aiming to alleviating the difficulty
+of tedious feature computation by the users.
+A strong relationship is show between DELPHI¡¯s prediction of protein
+binding sites and sites with a high degree of evolutionary conservation.
+While this relationship is not expected to be exclusive many binding sites
+will be conserved to maintain protein structure. This is demonstrated
+with three different mammalian proteins. In addition, a comparison of
+DELPHI¡¯s predictions are in strong agreement with known protein-binding
+residues (PBRs) from the Pfam database.
